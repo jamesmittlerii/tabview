@@ -52,18 +52,21 @@ struct ContentView: View {
     var body: some View {
         TabView {
             ForEach(tabs) { tab in
+                // Tab 1
                 ZStack {
                     Image(tab.assetName)
                         .resizable()
-                        .scaledToFill()  // fills while preserving aspect ratio (may crop)
+                        .scaledToFill() // fills while preserving aspect ratio (may crop)
                         .frame(maxWidth: .infinity, maxHeight: .infinity)
                         .clipped()
                 }
-                .ignoresSafeArea()  // truly edge-to-edge
+                .ignoresSafeArea() // truly edge-to-edge
                 .tabItem {
                     Label(tab.title, systemImage: tab.systemImage)
                 }
             }
+
+                 
         }
     }
 }
