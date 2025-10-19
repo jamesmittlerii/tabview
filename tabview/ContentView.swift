@@ -66,11 +66,6 @@ struct ContentView: View {
                     }
             }
         }
-        // Give the tab bar a strong, opaque background for contrast.
-        .toolbarBackground(.regularMaterial, for: .tabBar)
-        .toolbarBackground(.visible, for: .tabBar)
-        // Ensure icons/text use a high-contrast accent color.
-        .tint(.primary)
     }
 }
 
